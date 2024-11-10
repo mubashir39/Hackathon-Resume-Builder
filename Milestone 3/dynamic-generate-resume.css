@@ -1,0 +1,45 @@
+Resume Output Styles
+#resume-output {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+#resume-output h2 {
+    font-size: 20px;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.resume-section {
+    margin-bottom: 20px;
+}
+
+.resume-section h3 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.resume-section p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.resume-section ul {
+    padding-left: 20px;
+}
+
+.resume-section ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}

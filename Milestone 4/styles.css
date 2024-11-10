@@ -1,0 +1,240 @@
+/* Container for the layout */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left Column Styles */
+.left-column {
+    width: 25%;
+    /* Width of the left column */
+    background-color: rgba(178, 16, 16, 0.826);
+    /* Background color */
+    padding: 20px;
+    /* Padding for inner spacing */
+    color: white;
+    /* Text color */
+
+}
+
+/* Right Column Styles */
+.right-column {
+    width: 70%;
+    /* Width of the right column */
+    padding: 20px;
+    /* Padding for inner spacing */
+    background-color: white;
+    /* Background color */
+    color: black;
+    /* Text color */
+}
+
+/* Image Divider Styles */
+.img-divider {
+    width: 1%;
+    /* Width of the image divider */
+    display: flex;
+    /* Use flexbox to center the image */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: stretch;
+    /* Stretch to fill the column height */
+}
+
+/* Image within the divider */
+.img-divider img {
+    width: 100%;
+    /* Image takes full width of the divider */
+    height: 100%;
+    /* Set height to full viewport height */
+    object-fit: cover;
+    /* Cover to fill the space without distortion */
+}
+
+/* Profile Picture Styles */
+.profile-pic {
+    display: block;
+    /* Block display for centering */
+    margin-left: auto;
+    /* Auto margins for centering */
+    margin-right: 25%;
+    /* Auto margins for centering */
+    width: 55%;
+    /* Adjust the width of the profile picture */
+    height: 175px;
+    /* Set a fixed height for the profile picture */
+    border-radius: 50%;
+    /* Make it circular */
+    margin-bottom: 20px;
+    /* Space below the image */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the area */
+}
+
+/* Heading and Text Styles */
+h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Font for main title */
+    color: black;
+    /* Title color */
+    text-align: center;
+    /* Center the title */
+}
+
+h2,
+h3 {
+    font-family: 'Arial', sans-serif;
+    /* Font family for headings */
+    margin-top: 20px;
+    /* Margin above headings */
+    color: black;
+    /* Change color to black for headings */
+    text-align: left;
+    /* Align text to the left */
+}
+
+h3 {
+    font-size: 25px;
+    /* Font size for sub-title */
+}
+
+.head {
+    margin-top: 15px;
+}
+
+/* Paragraph and List Styles */
+p,
+ul,
+li {
+    font-family: 'Verdana', sans-serif;
+    /* Font family for text */
+    font-size: 14px;
+    /* Font size for text */
+    margin: 5px 0;
+    /* Margin for spacing between lines */
+}
+
+.skills-container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.skill-name {
+    width: 100px;
+    /* Fixed width to align all progress bars */
+    font-size: 16px;
+    color: white;
+    /* Skill text color */
+}
+
+.progress-bar {
+    flex: 1;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 100%;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Link Styles */
+.link {
+    color: white;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+/* Horizontal Rule Styles */
+hr {
+    border-color: grey;
+    /* Color for horizontal lines */
+}
+
+/* Projects Section Styles */
+.projects {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: space-between;
+    /* Space between project columns */
+}
+
+.projects div {
+    width: 40%;
+    /* Width for each project column */
+}
+
+/* Developed On Section Styles */
+.developed {
+    text-align: center;
+    /* Center the text */
+    color: black;
+    /* Text color */
+    margin-top: 20px;
+    /* Margin above this section */
+    font-weight: bolder;
+    /* Make the font bolder */
+    font-size: 16px;
+    /* Font size */
+}
+
+.left {
+    padding-left: 20px;
+}
+
+.head {
+    color: white !important;
+    ;
+
+}
+
+.position {
+    text-align: center;
+}
+
+/* Horizontal Rule Styles */
+hr {
+    border: 1px solid #ccc;
+    /* Change the color of the horizontal line */
+    margin: 20px 0;
+    /* Add margin above and below */
+}
+
+/* Horizontal Line Styles */
+hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Height of the line */
+    background-color: #e0e0e0; /* Color of the horizontal line */
+    margin: 20px 0; /* Margin above and below the line */
+}
+.button-container {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    /* height: 100vh;           Full viewport height to center vertically */
+}
+
+#edit-resume {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+
+}

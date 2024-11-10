@@ -1,0 +1,444 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+.circular-frame {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  margin: 0 auto; /* Centers the frame within its parent container */
+}
+
+#picture-preview-img,
+#display-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the frame without distortion */
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 70vw; /* Full width of the viewport */
+  max-width: 100%; /* Ensures no horizontal overflow */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-sizing: border-box; /* Includes padding in the element's width and height */
+}
+
+
+.left-column {
+  flex: 1;
+  padding: 15px;
+  margin: 0px;
+  width: 25%;
+  background-color: rgba(178, 16, 16, 0.826);
+  color: white;
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.left-column h3 {
+  font-size: 18px;
+  margin-bottom: 5px; /* Minimal spacing below heading */
+  color: #fff;
+}
+
+.left-column p,
+.left-column ul {
+  font-size: 14px;
+  margin: 4px 0; /* Minimal spacing for compact content */
+  line-height: 1.4;
+}
+
+.right-column {
+  width: 70%;
+  padding: 20px;
+  flex: 2;
+  background-color: white;
+  color: black;
+  margin-right: 10px; /* Small space on the right */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.right-column h3 {
+  font-size: 20px;
+  margin: 8px 0; /* Minimal spacing for a clean look */
+  color: #444;
+}
+
+.right-column p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Fieldset and legend styling */
+fieldset {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+/* Form Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+/* Image Divider Styles */
+.img-divider {
+  width: 1%; /* Width of the image divider */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: stretch; /* Stretch to fill the column height */
+}
+/* Button Styling */
+button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* C
+/* Image within the divider */
+.img-divider img {
+  width: 100%; /* Image takes full width of the divider */
+  height: 100%; /* Set height to full viewport height */
+  object-fit: cover; /* Cover to fill the space without distortion */
+}
+.head{
+  margin-top: 10px;
+}
+/* Centered Info Section */
+.centered-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.centered-info h1 {
+  font-size: 28px;
+  color: #444;
+}
+
+.centered-info .position {
+  font-size: 18px;
+  color: #777;
+}
+
+.skill-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Style the container to display skill name and progress bar in one line */
+.skill-entry {
+  margin-bottom: 15px;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will create space between the elements */
+}
+
+.skill-name {
+  flex: 1; /* Ensures the skill name takes up as much space as needed */
+  margin-right: 10px;
+}
+
+/* Skill display container for single-line layout */
+.skill-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px; /* Space between rows */
+}
+
+/* Skill name styling */
+.skill-display strong {
+  margin-right: 10px; /* Space between skill name and progress bar */
+}
+
+/* Progress bar styling */
+.progress-bar {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-right: 10px; /* Space between progress bar and percentage text */
+  overflow: hidden;
+}
+
+/* Progress inside the bar */
+.progress {
+  height: 100%;
+  background-color: #4caf50; /* Customize color */
+}
+
+/* Skill percentage text styling */
+.skill-percent-text {
+  font-size: 0.9em;
+  color: #333; /* Customize color */
+}
+#resume-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Styling for links in the resume section */
+a {
+  color: white; /* This will set the link color to white */
+  text-decoration: none; /* This will remove the underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Optional: Adds an underline on hover */
+}
+
+/* Optional: Styling for links in the portfolio links section */
+#display-portfolio-links a {
+  color: white; /* This will change the color of portfolio links to white */
+  text-decoration: none;
+}
+
+#display-portfolio-links a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+#display-name {
+  font-size: 36px;
+  color: #444;
+  margin-bottom: 10px; /* Adds minimal space below the name */
+}
+
+#display-position {
+  font-size: 24px;
+  color: #777;
+  margin-bottom: 10px; /* Adds minimal space below the position */
+}
+
+#education-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.education-entry {
+  margin-bottom: 0.5rem; /* Minimal space between entries */
+  padding: 0.3rem;
+}
+
+.education-entry label {
+  display: block;
+  margin: 0.1rem 0; /* Minimal margin between labels */
+}
+
+.education-entry input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.4rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+h4 {
+  font-weight: bold; /* Keeps the degree bold */
+  margin-bottom: 5px; /* Minimal spacing */
+}
+
+#display-about {
+  width: 100%; /* Ensures the element fits within its parent container */
+  padding: 10px; /* Adds some space between text and the border */
+  box-sizing: border-box; /* Includes padding in the total width */
+  overflow-wrap: break-word; /* Breaks long words to fit within boundaries */
+  word-wrap: break-word; /* Supports older browsers */
+  overflow: hidden; /* Prevents content from overflowing */
+  margin-bottom: 10px; /* Adds minimal space below the "About Me" section */
+}
+
+/* Project display styling */
+#display-projects-container h3 {
+  margin-top: 10px; /* Minimal space above each project heading */
+  margin-bottom: 5px; /* Minimal space below each project heading */
+}
+
+#display-projects-container p {
+  margin: 3px 0;
+}
+
+#display-projects-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#display-projects-container a:hover {
+  text-decoration: underline;
+}
+.languages-container {
+  margin-bottom: 20px;
+}
+.language-input {
+  margin-bottom: 10px;}
+
+  /* Button Styles */
+button[type="button"] {
+  text-align: end;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;  margin-top: 5px;
+
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+/* Styling the Skill, Links, and Certificate Sections */
+.skill-input,
+.portfolio-input,
+.language-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+/* Responsive Layout for Larger Screens (Desktops and Tablets) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .circular-frame {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Responsive Layout for Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .left-column, .right-column {
+    padding: 15px;
+  }
+}
+
+/* Responsive Adjustments for Medium Devices (425px - 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+
+  .skill-info {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .circular-frame {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 425px) {
+  .container {
+    width: 80vw; /* Full width of the viewport */
+    max-width: 100%; /* Ensures no horizontal overflow */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box; /* Includes padding in the element's width and height */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%; /* Stack columns on smaller screens */
+    padding: 10px; /* Reduce padding */
+    margin-right: 0; /* Remove right margin */
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 100vw; /* Full width of the viewport */
+    max-width: 100%; /* Ensures no horizontal overflow */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box; /* Includes padding in the element's width and height */
+  }
+
+  .left-column
+{
+
+    padding: 15px;
+    margin-right: 0px;
+  }
+}
+

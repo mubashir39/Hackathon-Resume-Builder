@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Muhammad Mubashir</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left column: 3 columns -->
+    <div class="left-column">
+      <div class="profile-picture-container">
+        <img src="./profile.jpg" alt="Profile Picture">
+      </div>
+            <div class="left">
+        <h2 onclick="toggleSection('contact')">Contact</h2>
+        <div id="contact" class="toggle-content">
+          <hr>
+          <p><strong>Phone:</strong> +92 325 3570380</p>
+          <p><strong>Email:</strong> mubashirkhi72@gmail.com</p>
+          <p><strong>Address:</strong> Orangi Town Karachi</p>
+        </div>
+
+        <h2 onclick="toggleSection('expertise')">Expertise</h2>
+        <div id="expertise" class="toggle-content">
+          <hr>
+          <div class="skills-container">
+            <div class="skill">
+              <span class="skill-name">HTML5</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">CSS3</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">JavaScript</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 60%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">Flutter</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">Bootstrap</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">GitHub</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">Firebase</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span class="skill-name">Canva</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 onclick="toggleSection('links')">Links</h2>
+        <div id="links" class="toggle-content">
+          <hr>
+          <p><a href="https://portfolio-by-mubashir-sable.vercel.app/" class="link" target="_blank">Portfolio</a></p>
+          <p><a href="https://github.com/muhammadmubashir72" class="link" target="_blank">Github</a></p>
+          <p><a href="https://www.linkedin.com/in/muhammad-mubashir-saeedi/" class="link" target="_blank">Linkedin</a></p>
+        </div>
+
+        <h2 onclick="toggleSection('language')">Language</h2>
+        <div id="language" class="toggle-content">
+          <hr>
+          <p>English</p>
+          <p>Urdu</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Divider -->
+    <div class="img-divider">
+      <img src="./download (1).jpeg" alt="Divider Image">
+    </div>
+
+    <!-- Right column: 8 columns -->
+    <div class="right-column">
+      <h1>Muhammad Mubashir Saeedi</h1>
+      <h3>Software Engineer</h3>
+
+      <h2 onclick="toggleSection('about')">About Me</h2>
+      <div id="about" class="toggle-content">
+        <hr>
+        <p>I'm a self-taught front-end developer skilled in HTML, CSS, and JavaScript. I'm also diving into Flutter development to create engaging mobile apps for iOS and Android. With my expertise in web design and enthusiasm for Flutter, I'm committed to delivering top-notch digital solutions. Let's team up to bring your vision to life on both web and mobile platforms.</p>
+      </div>
+
+      <h2 onclick="toggleSection('education')">Education</h2>
+      <div id="education" class="toggle-content">
+        <hr>
+        <p class="head"><strong>Sindh Madressatul Islam University</strong> | 2021 December - Continue</p>
+        <p>Bachelor in Software Engineering (BSSE)</p>
+        <p class="head"><strong>Jinnah Govt. Boys College</strong> | 2019 - 2021</p>
+        <p>Intermediate SSC (Pre-Engineering)</p>
+        <p class="head"><strong>Prince Public Secondary School</strong> | 2014 - 2019</p>
+        <p>Matriculation HSC (Science)</p>
+      </div>
+
+      <h2 onclick="toggleSection('certificates')">Certificates</h2>
+      <div id="certificates" class="toggle-content">
+        <hr>
+        <ul>
+          <li>Essential Certificate by Jawan Tech PK</li>
+          <li>Mobile Application Certificate By Bano Qabil 1.0</li>
+          <li>Mobile Application Certificate By Codsoft</li>
+        </ul>
+      </div>
+
+      <h2 onclick="toggleSection('projects')">Projects</h2>
+      <div id="projects" class="toggle-content">
+        <hr>
+        <div class="projects">
+          <div>
+            <ul>
+              <li>Calculator</li>
+              <li>Dice App</li>
+              <li>Ball Shuffling App</li>
+              <li>Todo App</li>
+              <li>Invest App</li>
+              <li>Lost and Found App</li>
+              <li>EduFlex App</li>
+              <li>Quote of the Day App</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Tic Tac Toe</li>
+              <li>Registration Form</li>
+              <li>Periodic Table</li>
+              <li>Restaurant</li>
+              <li>Kabab Jee</li>
+              <li>Amazon Clone</li>
+              <li>Calculator</li>
+              <li>CV Creator</li>
+              <li>Portfolio</li>
+            </ul>
+          </div>
+        </div>
+        <p class="developed">Developed on Flutter | Developed on HTML, CSS & JavaScript</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

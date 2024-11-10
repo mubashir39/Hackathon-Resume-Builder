@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./dynamic-resume.css" />
+  <title>Dynamic Resume</title>
+</head>
+
+<body>
+  <!-- Input Form Section -->
+
+  <!-- Input Form Section -->
+  <div id="input-section" class="container">
+    <form id="resume-form">
+      <fieldset>
+        <legend>Profile Picture</legend>
+        <div id="profile-picture-preview" class="circular-frame">
+          <img id="picture-preview-img" src="./profile.jpeg" alt="Profile Picture Preview" />
+        </div>
+        <input type="file" id="user-picture-input" accept="image/*" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Personal Details</legend>
+        <input type="text" id="user-name-input" placeholder="Your Name" required />
+        <input type="text" id="user-position-input" placeholder="Your Position" required />
+        <textarea id="user-about-input" placeholder="About Me" required></textarea>
+      </fieldset>
+
+      <!-- Contact Information -->
+      <fieldset>
+        <legend>Contact Information</legend>
+        <input type="email" id="user-email" placeholder="Email" required />
+        <input type="tel" id="user-phone" placeholder="Phone Number" required />
+        <input type="text" id="user-address" placeholder="Address" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Experties</legend>
+        <div id="skills-container">
+          <div class="skill-input">
+            <input type="text" class="skill-name" placeholder="Skill (e.g., HTML)" required />
+            <input type="number" class="skill-percent" placeholder="Skill (%)" min="0" max="100" required
+              oninput="updateProgressBar(this)" /> <br>
+            <!-- <div class="progress-bar">
+              <div class="progress"></div>
+            </div> -->
+          </div> <button type="button" onclick="addSkill()">+</button>
+
+        </div>
+      </fieldset>
+
+      <!-- Portfolio Links -->
+      <fieldset>
+        <legend>Links</legend>
+        <div id="portfolio-links-container">
+          <div class="portfolio-input">
+            <input type="text" class="portfolio-name" placeholder="LinkedIn" required />
+            <input type="url" class="portfolio-url" placeholder="LinkedIn URL" required />
+          </div>
+          <div class="portfolio-input">
+            <input type="text" class="portfolio-name" placeholder="GitHub" required />
+            <input type="url" class="portfolio-url" placeholder="GitHub URL" required />
+          </div>
+          <div class="portfolio-input">
+            <input type="text" class="portfolio-name" placeholder="Portfolio" required />
+            <input type="url" class="portfolio-url" placeholder="Portfolio URL" required />
+          </div>
+          &nbsp; <button class="button" type="button" onclick="addPortfolio()">+</button>
+
+        </div>
+      </fieldset>
+
+      <!-- Certificates -->
+      <fieldset>
+        <legend>Certificates</legend>
+        <div id="certificates-container">
+          <div class="certificate-input">
+            <input type="text" class="certificate-name" placeholder="Certificate Name" required />
+            <input type="text" class="certificate-issuer" placeholder="Issuer (e.g., Udemy)" required />
+            &nbsp;<button type="button" onclick="addCertificate()">+</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Education -->
+      <fieldset>
+        <legend>Education</legend>
+        <div id="education-form">
+          <div id="education-container">
+            <div class="education-input">
+              <input type="text" class="education-degree" placeholder="Degree (e.g., B.Sc.)" required />
+              <input type="text" class="education-institution" placeholder="Institution (e.g., XYZ University)"
+                required />
+              <input type="text" class="education-year-start" placeholder="Start Year" required />
+              <input type="text" class="education-year-end" placeholder="End Year" required />
+              &nbsp;<button type="button" onclick="addEducation()">+</button>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Projects -->
+      <fieldset>
+        <legend>Projects</legend>
+        <div id="projects-container">
+          <div class="project-input">
+            <input type="text" class="project-name" placeholder="Project Name (e.g., Web Project 1)" required />
+            <input type="url" class="project-url" placeholder="Source Code URL" required />
+            &nbsp;<button type="button" onclick="addProject()">+</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Languages -->
+      <fieldset>
+        <legend>Languages</legend>
+        <div id="language-container">
+          <div class="language-input">
+            <input type="text" class="language-name" placeholder="Language 1 (e.g., English)" required />
+          </div> <button type="button" onclick="addLanguage()">+</button>
+
+        </div>
+      </fieldset>
+
+      <!-- Reference -->
+      <fieldset>
+        <legend>Reference</legend>
+        <input type="text" id="reference-input" placeholder="Enter reference">
+      </fieldset>
+
+      <!-- Generate Resume Button -->
+      <center>
+        <button type="button" onclick="generateResume()">Preview Resume</button>
+      </center>
+    </form>
+  </div>
+
+  <!-- Dynamic Resume Section -->
+  <div id="resume-section" class="container" style="display: none">
+    <div class="left-column">
+      <div id="display-picture-container" class="circular-frame">
+        <img id="display-picture" src="" alt="Profile Picture" />
+      </div>
+      <h3 class="head">Contact</h3>
+      <hr class="heading-line" />
+      <p id="display-email"></p>
+      <p id="display-phone"></p>
+      <p id="display-address"></p>
+
+      <h3 class="head">Skills</h3>
+      <hr class="heading-line" />
+      <div class="skills-container" id="display-skills-container"></div>
+
+      <h3 class="head">Links</h3>
+      <hr class="heading-line" />
+      <ul id="display-portfolio-links"></ul>
+
+      <h3 class="head">Languages</h3>
+      <hr class="heading-line" />
+      <ul>
+        <li id="display-language1"></li>
+      </ul>
+    </div>
+    <div class="img-divider">
+      <img src="img_div.jpeg" alt="Divider Image" />
+    </div>
+    <div class="right-column">
+      <div class="centered-info">
+        <h1 id="display-name"></h1>
+        <h3 class="position" id="display-position"></h3>
+      </div>
+
+      <h3>About Me</h3>
+      <hr class="heading-line" />
+      <p id="display-about"></p>
+
+      <h3>Education</h3>
+      <hr class="heading-line" />
+      <div id="education-section"></div>
+
+      <h3 class="head">Certificates</h3>
+      <hr class="heading-line" />
+      <ul id="display-certificates"></ul>
+
+      <!-- Projects Display -->
+      <h3>Projects</h3>
+      <hr class="heading-line" />
+      <div id="display-projects-container"></div>
+      <br>
+      <h3 class="head">Reference</h3>
+      <hr class="heading-line" />
+      <div id="display-reference"></div>
+ <!-- Print and Edit Buttons -->
+ <div class="resume-buttons">
+  <button type="button" onclick="printResume()">Print Resume</button>
+  <button type="button" onclick="editResume()">Edit Resume</button>
+  <button type="button" onclick="copyLink()">Copy Shareable Link</button>
+  <p id="shareable-link"></p>
+
+
+</div>
+
+    </div>
+  </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
